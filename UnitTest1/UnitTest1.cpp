@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "CppUnitTest.h"
 #include "..\app\money.h"
 
@@ -24,7 +23,7 @@ namespace UnitTest1
 			money m(3, 35);
 			money t(0, 60);
 			m += t;
-			Assert::AreEqual(395, m.get_value());
+			Assert::AreEqual(395, m.total);
 		}
 
 		TEST_METHOD(test_subtract)
@@ -32,7 +31,7 @@ namespace UnitTest1
 			money m(4, 35);
 			money t(0, 80);
 			m -= t;
-			Assert::AreEqual(355, m.get_value());
+			Assert::AreEqual(355, m.total);
 		}
 
 		TEST_METHOD(test_overflow)
@@ -93,7 +92,7 @@ namespace UnitTest1
 			std::stringstream ss;
 			money m(5);
 			ss << m;
-			Assert::AreEqual("5 E."s, ss.str());
+			Assert::AreEqual("5 e."s, ss.str());
 		}
 
 	};

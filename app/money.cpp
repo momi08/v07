@@ -28,11 +28,10 @@ namespace vsite::oop::v7
 	}
 
 	std::ostream& operator << (std::ostream& os, const money& m) {
-		int euro; int cent;
-		euro = m.total / 100;
-		cent = m.total % 100;
+		int euro = m.total / 100;
+		int cent = m.total % 100;
 		if (cent == 0) {
-			os << euro << " E.";
+			os << euro << " e.";
 			return os;
 		}
 		else if (euro == 0)
@@ -44,18 +43,6 @@ namespace vsite::oop::v7
 			os << euro << " e i " << cent << " c.";
 			return os;
 		}
-	}
-
-	int money::get_value() const {
-		return total;
-	}
-
-	void money::add_value(int addt, int dec) {
-		total += addt * 100 + dec;
-	}
-
-	void money::sub_value(int subs, int dec) {
-		total -= (subs * 100 + dec);
 	}
 
 }

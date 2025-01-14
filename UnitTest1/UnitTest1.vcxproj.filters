@@ -18,18 +18,12 @@
     <ClCompile Include="UnitTest1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\app\money.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\app\money.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
